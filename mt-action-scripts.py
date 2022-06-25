@@ -70,7 +70,7 @@ wm_longitude=os.environ.get("wm_longitude")
 token =os.environ.get("token")
 propId=int(os.environ.get("propId"))
 exchangeCoinNumber=os.environ.get("exchangeCoinNumber")
-serverkey=os.environ.get("servekey")
+serverkey=os.environ.get("serverkey")
 pushPlusToken =os.environ.get("pushPlusToken")
 yesornot = os.environ.get("yesornot")
 yesornot2 = os.environ.get("yesornot2")
@@ -742,6 +742,7 @@ def main():
     a = __Autonomy__()
     sys.stdout = a
     print("脚本启动时间:%s\n"%(n_time))  
+    signForBeans()
     batchId = getbatchId()
     ##先去保持每天签到 以获得必中符或者豆子
     if expire ==0:
